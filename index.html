@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarkDown Page</title>
+    <title>Markdown-Web</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;400;700&display=swap" rel="stylesheet">
     <style>
+
         html, body {
             background-color: #0d1117;
             font-family: Roboto Flex;
@@ -26,6 +27,10 @@
             background-color: #151b23;
             border: 1px solid #3d444d;
             border-radius: 4px;
+        }
+        
+        pre[class*="language-"] * {
+            padding: 0;
         }
         
         code {
@@ -151,11 +156,15 @@
         }
         
         blockquote {
-            border: 0px solid #3d444d;
+            border: 0px solid #7a8088;
             border-left-width: 4px;
             padding: 0.5rem 1rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
+        }
+        
+        .table-data {
+            color: #ccc;
         }
         
         i {
@@ -173,105 +182,81 @@
     </style>
 </head>
 <body class="text-white">
-<div id="" class="grid-with-scrollable-cols "
-     style="background-color: #010409;display: grid;grid-template-columns: auto auto ;position: sticky;top: 0;z-index: 1020;">
-    <div id="" class="fs-2 p-2 " style="display: grid;justify-content: flex-start;">
-        <p>  <a class="a-1" href="https://dangel187.github.io/markdown-web.github.io/"><i class="bi bi-markdown"
-                                                                                          style="margin-right: -0.5rem;"></i>-Web</a>
-        </p>
-    </div>
-    <div id="" class="p-3 grid-with-scrollable-cols gap-4 fs-4 "
-         style="display: grid;align-items: center;display: grid;justify-content: flex-end;display: grid;grid-template-columns: auto auto auto ;">
-        <p><a class="a-1" href="/markdown-web.github.io/get-started">Get started</a></p>
-        <p><a class="a-1" href="/markdown-web.github.io/guides">Guides</a></p>
-        <p><a class="a-1" href="https://github.com/DangeL187/Markdown-Web"><i class="bi bi-github"
-                                                                              style="margin-right: -0.5rem;"></i></a>
-        </p>
-    </div>
+<div id=header class="grid-with-scrollable-cols " style="background-color: #010409;display: grid;grid-template-columns: auto auto ;position: sticky;top: 0;z-index: 1020;">
+<div id=logo class="fs-2 p-2 " style="display: grid;justify-content: flex-start;">
+<p>  <a class="a-1" href="https://dangel187.github.io/markdown-web.github.io/"><i class="bi bi-markdown" style="margin-right: -0.5rem;"></i>-Web</a></p>
 </div>
-<div id="" class="grid-with-scrollable-cols " style="display: grid;grid-template-columns: 1fr 3fr 1fr ;">
-    <div id="" class="" style="">
-        <p> </p>
-    </div>
-    <div id="" class="p-4 " style="">
-        <div id="" class="" style="display: grid;justify-content: center;">
-            <h1><strong>Markdown-Web</strong></h1>
-        </div>
-        <hr/>
-        <div id="" class="p-3 bordered-1-0 " style="background-color: #151b23;">
-            <h2><i class="bi bi-book" style="margin-right: -0.5rem;"></i> <strong>About</strong></h2>
-            <p><strong>Markdown-Web</strong> is an <strong>HTML code generator</strong> that uses an <strong>improved
-                version of the Markdown syntax</strong>.</p>
-            <p>&nbsp;</p>
-            <p>It is designed to make it easier to create simple websites using familiar tool.</p>
-            <p>&nbsp;</p>
-            <p>Now you don't have to manually write HTML: use the extended version of Markdown to manage styles, grids,
-                and interactive elements.</p>
-            <p>&nbsp;</p>
-            <p>The project is designed for developers, designers and anyone who wants to speed up the process of
-                creating simple web pages.</p>
-        </div>
-        <p>&nbsp;</p>
-        <div id="" class="p-3 bordered-1-0 " style="background-color: #151b23;">
-            <h2><i class="bi bi-star" style="margin-right: -0.5rem;"></i> <strong>Features</strong></h2>
-            <ul>
-                <li><i class="bi bi-rocket-takeoff" style="margin-right: -0.5rem;"></i> <strong>Fast website
-                    creation</strong>: With Markdown-Web, you can easily turn text into responsive HTML.
-                </li>
-                <li><i class="bi bi-palette" style="margin-right: -0.5rem;"></i> <strong>Large customization</strong>:
-                    Control styles and the behavior of elements directly in Markdown.
-                </li>
-                <li><i class="bi bi-code-square" style="margin-right: -0.5rem;"></i> <strong>Markdown</strong>: Full
-                    Markdown syntax support, and a little extra.
-                </li>
-                <li><i class="bi bi-gear" style="margin-right: -0.5rem;"></i> <strong>More possibilities</strong>:
-                    Borders, icons, color schemes, alignment, links, font sizes, comments, and grids are all available
-                    for your design needs.
-                </li>
-                <li><i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <strong>Components</strong>: Create
-                    custom components using a declarative approach.
-                </li>
-            </ul>
-            <!---->
-        </div>
-        <p>&nbsp;</p>
-        <div id="" class="grid-with-scrollable-cols gap-4 " style="display: grid;grid-template-columns: 1fr 1fr 1fr ;">
-            <div>
-                <a class="a-0" href="/markdown-web.github.io/get-started">
-                    <div id="" class="p-3 bordered-1 " style="height: 100%; ">
-                        <h4><i class="bi bi-rocket" style="margin-right: -0.5rem;"></i> <strong>Get Started</strong>
-                        </h4>
-                        <p>How to start using Markdown-Web.</p>
-                    </div>
-                </a>
-            </div>
-            <div>
-                <a class="a-0" href="/markdown-web.github.io/guides">
-                    <div id="" class="p-3 bordered-1 " style="height: 100%; ">
-                        <h4><i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <strong>Guides</strong>
-                        </h4>
-                        <p>Comprehensive guides on using Markdown-Web.</p>
-                    </div>
-                </a>
-            </div>
-            <div>
-                <a class="a-0" href="https://github.com/DangeL187/Markdown-Web/blob/main/CONTRIBUTING.md">
-                    <div id="" class="p-3 bordered-1 " style="height: 100%; ">
-                        <h4><i class="bi bi-person-hearts" style="margin-right: -0.5rem;"></i>
-                            <strong>Contribution</strong></h4>
-                        <p>We are always open to feedback and new ideas.<br/>
-                            Please help us to improve!</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <div id="" class="" style="color: #9198a1;text-align: center;">
-            <p><i class="bi bi-emoji-surprise" style="margin-right: -0.5rem;"></i> This page was fully generated using
-                Markdown-Web!</p>
-        </div>
-    </div>
+<div id=links class="p-3 grid-with-scrollable-cols gap-4 fs-4 " style="display: grid;align-items: center;display: grid;justify-content: flex-end;display: grid;grid-template-columns: auto auto auto ;">
+<p><a class="a-1" href="/markdown-web.github.io/get-started">Get started</a></p>
+<p><a class="a-1" href="/markdown-web.github.io/guides">Guides</a></p>
+<p><a class="a-1" href="https://github.com/DangeL187/Markdown-Web"><i class="bi bi-github" style="margin-right: -0.5rem;"></i></a></p>
+</div>
+</div>
+<div id=main class="grid-with-scrollable-cols " style="display: grid;grid-template-columns: 1fr 3fr 1fr ;">
+<div id=  class="" style="">
+<p> </p>
+</div>
+<div id=page class="p-4 " style="">
+<div id=md_web_title class="" style="display: grid;justify-content: center;">
+<h1><strong>Markdown-Web</strong></h1>
+</div>
+<hr />
+<div id=about class="p-3 bordered-1-0 " style="background-color: #151b23;">
+<h2><i class="bi bi-book" style="margin-right: -0.5rem;"></i> <strong>About</strong></h2>
+<p><strong>Markdown-Web</strong> is an <strong>HTML code generator</strong> that uses an <strong>improved version of the Markdown syntax</strong>.</p>
+<p>&nbsp;</p>
+<p>It is designed to make it easier to create simple websites using familiar tool.</p>
+<p>&nbsp;</p>
+<p>Now you don't have to manually write HTML: use the extended version of Markdown to manage styles, grids, and interactive elements.</p>
+<p>&nbsp;</p>
+<p>The project is designed for developers, designers and anyone who wants to speed up the process of creating simple web pages.</p>
+</div>
+<p>&nbsp;</p>
+<div id=features class="p-3 bordered-1-0 " style="background-color: #151b23;">
+<h2><i class="bi bi-star" style="margin-right: -0.5rem;"></i> <strong>Features</strong></h2>
+<ul>
+<li><i class="bi bi-rocket-takeoff" style="margin-right: -0.5rem;"></i> <strong>Fast website creation</strong>: With Markdown-Web, you can easily turn text into responsive HTML.</li>
+<li><i class="bi bi-palette" style="margin-right: -0.5rem;"></i> <strong>Large customization</strong>: Control styles and the behavior of elements directly in Markdown.</li>
+<li><i class="bi bi-code-square" style="margin-right: -0.5rem;"></i> <strong>Markdown</strong>: Full Markdown syntax support, and a little extra.</li>
+<li><i class="bi bi-gear" style="margin-right: -0.5rem;"></i> <strong>More possibilities</strong>: Borders, icons, color schemes, alignment, links, font sizes, comments, and grids are all available for your design needs.</li>
+<li><i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <strong>Components</strong>: Create custom components using a declarative approach.<br />
+{}</li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<div id=cells class="grid-with-scrollable-cols gap-4 " style="display: grid;grid-template-columns: 1fr 1fr 1fr ;">
+<div>
+<a class="a-0" href="/markdown-web.github.io/get-started">
+<div id=get_started class="p-3 bordered-1 " style="height: 100%; ">
+<h4><i class="bi bi-rocket" style="margin-right: -0.5rem;"></i> <strong>Get Started</strong></h4>
+<p>How to start using Markdown-Web.</p>
+</div>
+</a>
+</div>
+<div>
+<a class="a-0" href="/markdown-web.github.io/guides">
+<div id=guides class="p-3 bordered-1 " style="height: 100%; ">
+<h4><i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <strong>Guides</strong></h4>
+<p>Comprehensive guides on using Markdown-Web.</p>
+</div>
+</a>
+</div>
+<div>
+<a class="a-0" href="https://github.com/DangeL187/Markdown-Web/blob/main/CONTRIBUTING.md">
+<div id=contribution class="p-3 bordered-1 " style="height: 100%; ">
+<h4><i class="bi bi-person-hearts" style="margin-right: -0.5rem;"></i> <strong>Contribution</strong></h4>
+<p>We are always open to feedback and new ideas.<br />
+Please help us to improve!</p>
+</div>
+</a>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id=info class="" style="color: #9198a1;text-align: center;">
+<p><i class="bi bi-emoji-surprise" style="margin-right: -0.5rem;"></i> This page was fully generated using Markdown-Web!</p>
+</div>
+</div>
 </div>
 <!-- JS -->
 <script>
@@ -296,12 +281,12 @@
                 icon.classList.add('bi-copy');
             });
     }
+
 </script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Prism JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>

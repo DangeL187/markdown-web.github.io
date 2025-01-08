@@ -12,6 +12,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --header-height: 0px;
+        }
 
         html, body {
             background-color: #0d1117;
@@ -192,84 +195,95 @@
 <p><a class="a-1" href="https://github.com/DangeL187/Markdown-Web"><i class="bi bi-github" style="margin-right: -0.5rem;"></i></a></p>
 </div>
 </div>
-<div id=overlay class="grid-with-scrollable-cols " style="height: 100%;width: 100%;position: fixed;display: grid;grid-template-columns: 1fr 5fr ;">
+<div id=overlay class="grid-with-scrollable-cols " style="height: 100%;width: 100%;position: fixed;display: grid;grid-template-columns: 1fr 3fr 2fr ;">
 <div id=side_panel class="p-3 bordered-1-0 " style="overflow: scroll;pointer-events: auto;">
 <div id=side_panel_links_before class="bordered-3-0 " style="">
 <p><i class="bi bi-rocket" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started">Get Started</a><br />
-      <i class="bi bi-shift" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/setup">Setup</a><br />
-      <i class="bi bi-signpost" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/basics">Basics</a><br />
-      <i class="bi bi-tools" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/how-it-works">How it Works</a></p>
+      <i class="bi bi-shift" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/setup">Setup</a></p>
 </div>
 <div id=current_page_name class="bordered-3 " style="">
-<p><i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides">Guides</a></p>
+<p>      <i class="bi bi-signpost" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/basics">Basics</a></p>
 </div>
 <div id=side_panel_links_after class="bordered-3-0 " style="">
-<p>      <i class="bi bi-code" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/md-syntax">Markdown Syntax</a><br />
+<p>      <i class="bi bi-tools" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/how-it-works">How it Works</a><br />
+<i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides">Guides</a><br />
+      <i class="bi bi-code" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/md-syntax">Markdown Syntax</a><br />
       <i class="bi bi-code-slash" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/advanced-syntax">Advanced Syntax</a><br />
       <i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/components">Components</a><br />
       <i class="bi bi-layout-text-window-reverse" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/advanced_usage">Advanced Usage</a><br />
       <i class="bi bi-bug" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/limitations">Limitations</a></p>
 </div>
 </div>
+<div id=  class="" style="">
+<p> </p>
+</div>
+<div id=toc class="p-3 " style="overflow: scroll;pointer-events: auto;">
+<h5>Table of contents</h5>
+<p>      <a class="a-2" href="#h_general">General</a><br />
+      <a class="a-2" href="#h_start">Start</a></p>
+</div>
 </div>
 <div id=main class="grid-with-scrollable-cols " style="display: grid;grid-template-columns: 1fr 3fr 2fr ;">
 <div id=side_panel_bg class="" style="z-index: -1;">
 </div>
 <div id=page class="p-4 " style="">
-<h1><strong>Guides</strong></h1>
-<p>Guides on each aspect of creating a website using Markdown-Web.</p>
+<h1><strong>Basics</strong></h1>
+<p>This section will provide you with all the basic information you need to use Markdown-Web.</p>
 <hr />
-<div id=cells class="grid-with-scrollable-cols gap-4 " style="display: grid;grid-template-columns: 1fr 1fr 1fr ;">
+<div id=h_general class="" style="scroll-margin-top: var(--header-height);">
+<h1>General</h1>
+</div>
+<p><strong>Markdown-Web</strong> is written in <code>Python</code> and allows you to easily create web pages using the familiar Markdown syntax, with a few additional features.</p>
+<p>&nbsp;</p>
+<p>Besides the converting Markdown to HTML code, it provides advanced features such as:</p>
+<ul>
+<li>Creating <strong>components</strong> for further reuse</li>
+<li><strong>Icons</strong></li>
+<li>Customizing <strong>components</strong> using CSS-like styling</li>
+<li>Customizable <strong>links</strong></li>
+<li>Customizable <strong>block quotes</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p>It is also powerful enough to create <strong>sidebars</strong> and <strong>headers</strong>!</p>
+<p>&nbsp;</p>
+<div id=h_start class="" style="scroll-margin-top: var(--header-height);">
+<h1>Start</h1>
+</div>
+<p>Let's create your first web page using Markdown-Web!</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown"># Hello World
+This is my first web page written using Markdown-Web.</code></pre>
+</div>
+<p>&nbsp;</p>
+<ol>
+<li>Copy this code into a <code>.md</code> file.</li>
+<li>Create a new directory called <code>MyFirstPage</code> and move the file into it.</li>
+<li>Convert it to HTML using Markdown-Web:</li>
+</ol>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-bash">python main.py MyFirstPage</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>Now, all <code>.md</code> files in the <code>MyFirstPage</code> directory have been converted to HTML.<br />
+You can find them in the <code>output</code> directory.</p>
+<p>&nbsp;</p>
+<p>Check out the section <code>Guides</code> to learn more!</p>
+<hr />
 <div>
-<a class="a-0" href="/markdown-web.github.io/guides/md-syntax">
-<div id=md_syntax class="p-3 bordered-1 " style="height: 100%; ">
-<h4><i class="bi bi-code" style="margin-right: -0.5rem;"></i> <strong>Markdown Syntax</strong></h4>
-<p>Learn how to use basic Markdown syntax in Markdown-Web.</p>
+<a class="a-0" href="/markdown-web.github.io/guides">
+<div id=next class="p-3 bordered-1 " style="height: 100%; ">
+<h4><i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <strong>Guides</strong></h4>
+<p>All the information you need to create a website using Markdown-Web is provided here!</p>
 </div>
 </a>
-</div>
-<div>
-<a class="a-0" href="/markdown-web.github.io/guides/advanced-syntax">
-<div id=advanced_syntax class="p-3 bordered-1 " style="height: 100%; ">
-<h4><i class="bi bi-code-slash" style="margin-right: -0.5rem;"></i> <strong>Advanced Syntax</strong></h4>
-<p>Learn how to use advanced Markdown syntax in<br />
-Markdown-Web.</p>
-</div>
-</a>
-</div>
-<div>
-<a class="a-0" href="/markdown-web.github.io/guides/components">
-<div id=components class="p-3 bordered-1 " style="height: 100%; ">
-<h4><i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <strong>Components</strong></h4>
-<p>Learn how to create and use components.</p>
-</div>
-</a>
-</div>
-<div>
-<a class="a-0" href="/markdown-web.github.io/guides/advanced_usage">
-<div id=advanced_usage class="p-3 bordered-1 " style="height: 100%; ">
-<h4><i class="bi bi-layout-text-window-reverse" style="margin-right: -0.5rem;"></i> <strong>Advanced Usage</strong></h4>
-<p>Learn how to create complicated components.</p>
-</div>
-</a>
-</div>
-<div>
-<a class="a-0" href="/markdown-web.github.io/guides/limitations">
-<div id=limitations class="p-3 bordered-1 " style="height: 100%; ">
-<h4><i class="bi bi-bug" style="margin-right: -0.5rem;"></i> <strong>Limitations</strong></h4>
-<p>Known limitations and bugs of Markdown-Web.</p>
-</div>
-</a>
-</div>
 </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div id=info class="" style="color: #9198a1;text-align: center;">
 <p><i class="bi bi-emoji-surprise" style="margin-right: -0.5rem;"></i> This page was fully generated using Markdown-Web!</p>
 </div>
-</div>
-<div id=  class="" style="">
-<p> </p>
 </div>
 </div>
 <!-- JS -->
@@ -296,6 +310,15 @@ Markdown-Web.</p>
             });
     }
 
+    function updateCSSVariables() {
+      const element = document.getElementById('header');
+      const value = element.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--header-height', `${value}px`);
+    }
+
+    window.addEventListener('load', updateCSSVariables);
+    window.addEventListener('resize', updateCSSVariables);
+    
 </script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
