@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown-Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --header-height: 0px;
+        }
+
+        html, body {
+            background-color: #0d1117;
+            font-family: Roboto Flex;
+        }
+        
+        body * {
+            z-index: 0;
+        }
+        
+        pre[class*="language-"] {
+            font-size: 14px;
+            background-color: #151b23;
+            border: 1px solid #3d444d;
+            border-radius: 4px;
+        }
+        
+        pre[class*="language-"] * {
+            padding: 0;
+        }
+        
+        code {
+            background-color: #1e242a;
+            color: #FFFFFF;
+            padding: .2em .4em;
+            margin: 0;
+            border-radius: 6px;
+            tab-size: 4;
+        }
+        
+        hr {
+            background-color: #3d444d;
+            height: .25em;
+            border: 0;
+            opacity: 100;
+        }
+        
+        table {
+            display: block;
+            width: max-content;
+            overflow: auto;
+        }
+        
+        table td {
+            padding: 6px 13px;
+            border: 1px solid #3d444d;
+        }
+        
+        table th {
+            padding: 6px 13px;
+            text-align: center;
+            border: 1px solid #3d444d;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        ul {
+            margin: 0;
+        }
+        
+        ol {
+            margin: 0;
+        }
+        
+        li {
+            margin-top: .25rem;
+        }
+        
+        a {
+            color: #4493f8;
+        }
+        
+        .a- {
+            color: #4493f8;
+        }
+        
+        .a-0 {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .a-1 {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .a-1:hover {
+            color: #4493f8;
+        }
+        
+        .a-2 {
+            color: #9198a1;
+            text-decoration: none;
+        }
+        
+        .a-2:hover {
+            text-decoration: underline;
+        }
+        
+        .bordered-1-0 {
+            background-color: #0d1117;
+            border: 1px solid #3d444d;
+            border-radius: 4px;
+        }
+        
+        .bordered-1 {
+            background-color: #0d1117;
+            border: 1px solid #3d444d;
+            border-radius: 4px;
+        }
+        
+        .bordered-1:hover {
+            background-color: #151b23;
+        }
+        
+        .bordered-2 {
+            background-color: #212830;
+            border: 1px solid #3d444d;
+            border-radius: 4px;
+        }
+        
+        .bordered-2:hover {
+            background-color: #262c36;
+        }
+        
+        .bordered-3 {
+            border: 0px solid #4493f8;
+            border-left-width: 4px;
+            padding-left: 0.5rem;
+        }
+        
+        .bordered-3-0 {
+            border: 0px solid transparent;
+            border-left-width: 4px;
+            padding-left: 0.5rem;
+        }
+        
+        .grid-with-scrollable-cols > * {
+            overflow: auto;
+        }
+        
+        blockquote {
+            border: 0px solid #7a8088;
+            border-left-width: 4px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .table-data {
+            color: #ccc;
+        }
+        
+        i {
+            font-style: normal;
+        }
+        
+        i:before {            
+            margin-right: 0.5rem;
+        }
+
+        .bi {
+          display: inline-block;
+        }
+
+    </style>
+</head>
+<body class="text-white">
+<div id=header class="grid-with-scrollable-cols " style="background-color: #010409;display: grid;grid-template-columns: auto auto ;position: sticky;top: 0;z-index: 1020;">
+<div id=logo class="fs-2 p-2 " style="display: grid;justify-content: flex-start;">
+<p>  <a class="a-1" href="https://dangel187.github.io/markdown-web.github.io/"><i class="bi bi-markdown" style="margin-right: -0.5rem;"></i>-Web</a></p>
+</div>
+<div id=links class="p-3 grid-with-scrollable-cols gap-4 fs-4 " style="display: grid;align-items: center;display: grid;justify-content: flex-end;display: grid;grid-template-columns: auto auto auto ;">
+<p><a class="a-1" href="/markdown-web.github.io/get-started">Get started</a></p>
+<p><a class="a-1" href="/markdown-web.github.io/guides">Guides</a></p>
+<p><a class="a-1" href="https://github.com/DangeL187/Markdown-Web"><i class="bi bi-github" style="margin-right: -0.5rem;"></i></a></p>
+</div>
+</div>
+<div id=overlay class="grid-with-scrollable-cols " style="height: 100%;width: 100%;position: fixed;display: grid;grid-template-columns: 1fr 3fr 2fr ;">
+<div id=side_panel class="p-3 bordered-1-0 " style="overflow: scroll;pointer-events: auto;">
+<div id=side_panel_links_before class="bordered-3-0 " style="">
+<p><i class="bi bi-rocket" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started">Get Started</a><br />
+      <i class="bi bi-shift" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/setup">Setup</a><br />
+      <i class="bi bi-signpost" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/basics">Basics</a><br />
+      <i class="bi bi-tools" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/get-started/how-it-works">How it Works</a><br />
+<i class="bi bi-journal-text" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides">Guides</a><br />
+      <i class="bi bi-code" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/md-syntax">Markdown Syntax</a></p>
+</div>
+<div id=current_page_name class="bordered-3 " style="">
+<p>      <i class="bi bi-code-slash" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/advanced-syntax">Advanced Syntax</a></p>
+</div>
+<div id=side_panel_links_after class="bordered-3-0 " style="">
+<p>      <i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/components">Components</a><br />
+      <i class="bi bi-layout-text-window-reverse" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/advanced_usage">Advanced Usage</a><br />
+      <i class="bi bi-bug" style="margin-right: -0.5rem;"></i> <a class="a-1" href="/markdown-web.github.io/guides/limitations">Limitations</a></p>
+</div>
+</div>
+<div id=  class="" style="">
+<p> </p>
+</div>
+<div id=toc class="p-3 " style="overflow: scroll;pointer-events: auto;">
+<h5>Table of contents</h5>
+<p>      <a class="a-2" href="#h_comments">Comments</a><br />
+      <a class="a-2" href="#h_emphasis">Emphasis</a><br />
+      <a class="a-2" href="#h_icons">Icons</a><br />
+      <a class="a-2" href="#h_custom_links">Custom links</a><br />
+      <a class="a-2" href="#h_custom_blockquotes">Custom Blockquotes</a></p>
+</div>
+</div>
+<div id=main class="grid-with-scrollable-cols " style="display: grid;grid-template-columns: 1fr 3fr 2fr ;">
+<div id=side_panel_bg class="" style="z-index: -1;">
+</div>
+<div id=page class="p-4 " style="">
+<h1><strong>Advanced Syntax</strong></h1>
+<p>Learn how to use advanced Markdown syntax in Markdown-Web.</p>
+<hr />
+<div id=h_comments class="" style="scroll-margin-top: var(--header-height);">
+<h1>Comments</h1>
+</div>
+<p>Commented lines will be ignored by the parser.</p>
+<blockquote style="border-color: #1f6feb"><i class="bi bi-info-circle" style="margin-bottom: 1rem; color: #1f6feb">Note</i>
+<p><p>You still need to be careful about blank lines, even if you're using comments.</p>
+</p>
+<p><p>Comments are not <strong>replaced</strong> with blank lines. Instead, lines containing comments are removed.</p>
+</p>
+</blockquote>
+<!---->
+<p>Code:</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown">// I am a comment
+//Me too
+    // Same
+Text
+// Ignore me :(</code></pre>
+</div>
+<p>Result:</p>
+<div id=comments_result class="p-3 bordered-1-0 " style="">
+<p>Text</p>
+</div>
+<p>&nbsp;</p>
+<div id=h_emphasis class="" style="scroll-margin-top: var(--header-height);">
+<h1>Emphasis</h1>
+</div>
+<p>Besides default emphasis, Markdown-Web also supports strikethrough and underlining.</p>
+<p>&nbsp;</p>
+<p>Code:</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown">~~Strikethrough~~
+++Underlined++</code></pre>
+</div>
+<p>Result:</p>
+<div id=emphasis_result class="p-3 bordered-1-0 " style="">
+<p><s>Strikethrough</s><br />
+<u>Underlined</u></p>
+</div>
+<p>&nbsp;</p>
+<div id=h_icons class="" style="scroll-margin-top: var(--header-height);">
+<h1>Icons</h1>
+</div>
+<p>Markdown-Web supports <strong>icons</strong>, you can create them using the following syntax: <code>~icon_name~</code>.<br />
+It uses Bootstrap icons, which you can find the names of on their <a href="https://icons.getbootstrap.com/">website</a>.</p>
+<p>&nbsp;</p>
+<blockquote style="border-color: #8957e5"><i class="bi bi-fire" style="margin-bottom: 1rem; color: #8957e5">Important</i>
+<p><p>Pair <code>~</code> symbols might be recognized by the parser.</p>
+</p>
+<p><p>In order to prevent this, please use the <code>\~</code> syntax.</p>
+</p>
+<p><p>For example, use <code>\~</code> instead of <code>~</code>.</p>
+</p>
+<p><p>This rule does not apply to code blocks.</p>
+</p>
+</blockquote>
+<!---->
+<p>Code:</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown">Some text ~cup-hot-fill~ text ~droplet-fill~ and text.</code></pre>
+</div>
+<p>Result:</p>
+<div id=icons_result class="p-3 bordered-1-0 " style="">
+<p>Some text <i class="bi bi-cup-hot-fill" style="margin-right: -0.5rem;"></i> text <i class="bi bi-droplet-fill" style="margin-right: -0.5rem;"></i> and text.</p>
+</div>
+<p>&nbsp;</p>
+<div id=h_custom_links class="" style="scroll-margin-top: var(--header-height);">
+<h1>Custom Links</h1>
+</div>
+<p>You can create links with custom design by adding a <code>{number}</code> at the end of the default Markdown link syntax.<br />
+At the moment, there are three types of link styles - <code>0</code>, <code>1</code> and <code>2</code>.</p>
+<p>&nbsp;</p>
+<p>Code:</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown">[Default Link]()
+[Custom Link 0](){0}
+[Custom Link 1](){1}
+[Custom Link 2](){2}</code></pre>
+</div>
+<p>Result:</p>
+<div id=links_result class="p-3 bordered-1-0 " style="">
+<p><a href="">Default Link</a><br />
+<a class="a-0" href="">Custom Link 0</a><br />
+<a class="a-1" href="">Custom Link 1</a><br />
+<a class="a-2" href="">Custom Link 2</a></p>
+</div>
+<p>&nbsp;</p>
+<div id=h_custom_blockquotes class="" style="scroll-margin-top: var(--header-height);">
+<h1>Custom Blockquotes</h1>
+</div>
+<p>There are 5 default types of blockquotes with titles, but you can also create a custom one.<br />
+To create a custom blockquote, simply add a <code>{hex_color, icon_name}</code> construction after the name of the blockquote.<br />
+Don't forget to use a blank line after a blockquote.</p>
+<p>&nbsp;</p>
+<p>Code:</p>
+<div class="code-item" style="position: relative;">
+<i class="bi bi-copy bordered-2" style="padding-bottom: 0.25rem; padding-top: 0.25rem; padding-left: 0.5rem; position: absolute; top: 0.5rem; right: 0.5rem;" onclick="copyCodeToClipboard(event)"></i>
+<pre><code class="language-markdown">&gt; [!Note]
+&gt; Highlights information that users should take into account, even when skimming.
+
+&gt; [!Tip]
+&gt; Optional information to help a user be more successful.
+
+&gt; [!Important]
+&gt; Crucial information necessary for users to succeed.
+
+&gt; [!Warning]
+&gt; Critical content demanding immediate user attention due to potential risks.
+
+&gt; [!Caution]
+&gt; Negative potential consequences of an action.
+
+&gt; [!Custom{#ad58ef, heart-fill}]
+&gt; Customized block quote
+</code></pre>
+</div>
+<p>Result:</p>
+<div id=blockquotes_result class="p-3 bordered-1-0 " style="">
+<blockquote style="border-color: #1f6feb"><i class="bi bi-info-circle" style="margin-bottom: 1rem; color: #1f6feb">Note</i>
+<p><p>Highlights information that users should take into account, even when skimming.</p>
+</p>
+</blockquote>
+<!---->
+<blockquote style="border-color: #238636"><i class="bi bi-lightbulb" style="margin-bottom: 1rem; color: #238636">Tip</i>
+<p><p>Optional information to help a user be more successful.</p>
+</p>
+</blockquote>
+<!---->
+<blockquote style="border-color: #8957e5"><i class="bi bi-fire" style="margin-bottom: 1rem; color: #8957e5">Important</i>
+<p><p>Crucial information necessary for users to succeed.</p>
+</p>
+</blockquote>
+<!---->
+<blockquote style="border-color: #9e6a03"><i class="bi bi-exclamation-triangle" style="margin-bottom: 1rem; color: #9e6a03">Warning</i>
+<p><p>Critical content demanding immediate user attention due to potential risks.</p>
+</p>
+</blockquote>
+<!---->
+<blockquote style="border-color: #da3633"><i class="bi bi-exclamation-octagon" style="margin-bottom: 1rem; color: #da3633">Caution</i>
+<p><p>Negative potential consequences of an action.</p>
+</p>
+</blockquote>
+<!---->
+<blockquote style="border-color: #ad58ef"><i class="bi bi-heart-fill" style="margin-bottom: 1rem; color: #ad58ef">Custom</i>
+<p><p>Customized block quote</p>
+</p>
+</blockquote>
+<!---->
+</div>
+<hr />
+<div>
+<a class="a-0" href="/markdown-web.github.io/guides/components">
+<div id=next class="p-3 bordered-1 " style="height: 100%; ">
+<h4><i class="bi bi-braces" style="margin-right: -0.5rem;"></i> <strong>Components</strong></h4>
+<p>Learn how to create and use components.</p>
+</div>
+</a>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id=info class="" style="color: #9198a1;text-align: center;">
+<p><i class="bi bi-emoji-surprise" style="margin-right: -0.5rem;"></i> This page was fully generated using Markdown-Web!</p>
+</div>
+</div>
+</div>
+<!-- JS -->
+<script>
+    function copyCodeToClipboard(event) {
+        const codeBlock = event.target.closest('.code-item').querySelector('code');
+        const icon = event.target;
+
+        icon.classList.remove('bi-copy');
+        icon.classList.add('bi-check-lg');
+
+        const codeText = codeBlock.innerText;
+
+        navigator.clipboard.writeText(codeText)
+            .then(() => {
+                setTimeout(() => {
+                    icon.classList.remove('bi-hourglass');
+                    icon.classList.add('bi-copy');
+                }, 1000);
+            })
+            .catch((err) => {
+                icon.classList.remove('bi-hourglass');
+                icon.classList.add('bi-copy');
+            });
+    }
+
+    function updateCSSVariables() {
+      const element = document.getElementById('header');
+      const value = element.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--header-height', `${value}px`);
+    }
+
+    window.addEventListener('load', updateCSSVariables);
+    window.addEventListener('resize', updateCSSVariables);
+    
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Prism JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
